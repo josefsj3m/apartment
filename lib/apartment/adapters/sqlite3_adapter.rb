@@ -13,6 +13,10 @@ module Apartment
         @default_dir = File.expand_path(File.dirname(config[:database]))
 
         super
+
+        # Fix to issue #180
+        Apartment.connection_handler = ActiveRecord::ConnectionAdapters::ConnectionHandler.new
+        reset
       end
 
       def drop(tenant)

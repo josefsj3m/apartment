@@ -16,7 +16,9 @@ module Apartment
     attr_accessor(*ACCESSOR_METHODS)
     attr_writer(*WRITER_METHODS)
 
-    def_delegators :connection_class, :connection, :connection_config, :establish_connection
+    # def_delegators :connection_class, :connection, :connection_config, :establish_connection
+    # Fix to issue #180
+    def_delegators :connection_class, :connection, :connection_handler, :connection_handler=, :connection_config, :establish_connection
 
     # configure apartment with available options
     def configure

@@ -10,6 +10,9 @@ Apartment provides tools to help you deal with multiple tenants in your Rails
 application. If you need to have certain data sequestered based on account or company,
 but still allow some data to exist in a common tenant, Apartment can help.
 
+**PS: This fork contains the fix for the issue influitive#180 (https://github.com/influitive/apartment/issues/180)
+committed to the development branch (2018-10-27).**
+
 ## HELP!
 
 In order to help drive the direction of development and clean up the codebase, we'd like to take a poll

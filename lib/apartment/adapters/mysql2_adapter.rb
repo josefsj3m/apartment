@@ -17,6 +17,9 @@ module Apartment
         super
 
         @default_tenant = config[:database]
+        # Fix to issue #180
+        Apartment.connection_handler = ActiveRecord::ConnectionAdapters::ConnectionHandler.new
+        reset
       end
 
     protected
